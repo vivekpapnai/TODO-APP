@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do APP</title>
+    <script src="https://kit.fontawesome.com/c920cc5dc0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <div class="outer-div">
+    
+    <div class="heading">
+        <h1>TODO APP</h1>
+    </div>
+    <!-- form for task information  -->
+    <div class="task-form">
+        <form action="/create-task" method="POST">
+        <div class="description"> 
+             <label for="task-desc">Description</label>   
+            <input type="text" id="task-desc" name="task_desc" placeholder="Enter the task you want to do">
+        </div>
+        <div class="category">
+            <label for="category">Category</label>
+            <select  id="category" class="category-option" name="category">
+            <option value="Choose a Category" disabled selected>Choose a category</option>
+            <option value="Personal">Personal</option>
+            <option value="Work">Work</option>
+            <option value="College">College</option>
+            <option value="Entertainment">Personal</option>
+        </select>
+    </div>
+        <div class="task-date">
+            <label for="due-date">Date</label>
+            <input type="date"  id="due-date" name="dueDate" placeholder="Due date">
+        </div>
+        <div class="buttons">
+            <button type="submit" id=sbmit-btn>
+                <i class="fas fa-plus"></i>
+                Add Tasks
+            </button>
+            <!-- <button type="submit" id=dlt-btn>
+                <i class="fas fa-trash-alt"></i>
+                    Delete Tasks
+            </button> -->
+        </div>
+
+        </form>    
+    </div>
+
+    <div class="show-task">
+
+        
+    </div>
+
+
+    </div>
+
+</body>
+</html>
