@@ -73,3 +73,47 @@ h1{
     border-radius: 12px;
     border: 2px solid;
 }
+
+.show-task{
+
+    margin-top: 3%;
+
+}
+
+
+.todo-data{
+    margin-left: 15%;
+    width: 70%;
+    border: 1px solid slategray;
+    height: 90px;
+}
+.final-data{
+    position: relative;
+}
+
+.delete-box{
+    display: inline-block;
+    margin-left: 1%;
+
+}
+
+.delete-box input {
+    height: 60px;
+    width: 22px;
+}
+
+.taskdata{
+    display: inline-block;
+    position: relative;
+    left: 5%;
+}
+.checkbox{
+    margin-left: -3%;
+}
+
+.task-category{
+    position: relative;
+    left: 390%;
+    top: -25;
+    margin-top: -36%;
+}

@@ -11,11 +11,12 @@ app.set('views', './views');
 
 
 // include mongo when server is running
-const db = require('./config/mongoose');
-const todoApp = require('./models/todo')
+// const db = require('./config/mongoose');
+// const todoApp = require('./models/todo');
 
 // incldue static files
 app.use(express.static('assets'));
+
 
 
 // listening to the port

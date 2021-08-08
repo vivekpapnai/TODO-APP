@@ -8,15 +8,15 @@ const todoSchema = new mongoose.Schema({
     },
     Category :{
         type : String,
-        required : true
+        // required : true
     },
     DueDate: {
-        type : Date,
+        type : String,
         required : true
     }
 
 })
 
-const todoApp = mongoose.model('todo', todoSchema);
+const todoApp = mongoose.model('todoApp', todoSchema);
 
 module.exports = todoApp;

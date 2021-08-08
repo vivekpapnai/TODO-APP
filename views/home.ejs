@@ -19,7 +19,7 @@
         <form action="/create-task" method="POST">
         <div class="description"> 
              <label for="task-desc">Description</label>   
-            <input type="text" id="task-desc" name="task_desc" placeholder="Enter the task you want to do">
+            <input type="text" id="task-desc" name="taskDesc" placeholder="Enter the task you want to do">
         </div>
         <div class="category">
             <label for="category">Category</label>
@@ -27,7 +27,7 @@
             <option value="Choose a Category" disabled selected>Choose a category</option>
             <option value="Personal">Personal</option>
             <option value="Work">Work</option>
-            <option value="College">College</option>
+            <option value="College" >College</option>
             <option value="Entertainment">Personal</option>
         </select>
     </div>
@@ -40,16 +40,38 @@
                 <i class="fas fa-plus"></i>
                 Add Tasks
             </button>
-            <!-- <button type="submit" id=dlt-btn>
-                <i class="fas fa-trash-alt"></i>
-                    Delete Tasks
-            </button> -->
         </div>
 
         </form>    
     </div>
 
     <div class="show-task">
+
+        <% for (let i of todo_data) { %>
+
+            <div class="todo-data">
+                <li class="data-list" type="none">
+
+                    <div class="final-data">
+
+                        <div class="taskdata">
+                            <label class="checkbox">
+                                <input type="checkbox" /><%= i.Description %>
+                            </label>
+                            <h4> <i class="far fa-calendar-alt"></i> <%= i.DueDate %> </h4>
+                            <div class="task-category"><%= i.Category %></div>
+                        </div>
+                        
+                    </div>
+
+
+                </li>
+
+            </div>
+
+
+
+        <%} %>
 
         
     </div>
