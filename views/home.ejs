@@ -35,7 +35,7 @@
             <label for="due-date">Date</label>
             <input type="date"  id="due-date" name="dueDate" placeholder="Due date">
         </div>
-        <div class="buttons">
+        <div class="buttons" id="add-btn">
             <button type="submit" id=sbmit-btn>
                 <i class="fas fa-plus"></i>
                 Add Tasks
@@ -45,13 +45,25 @@
         </form>    
     </div>
 
+
+    <div class="delete-button">
+        <a href="/delete-task">
+            <div class="buttons">
+                <button type="submit" id="dlt-btn">
+                    <i class="fas fa-plus"></i>
+                    Delete Tasks
+                </button>
+            </div>
+        </a>
+    </div>
+
     <div class="show-task">
 
         <% for (let i of todo_data) { %>
 
             <div class="todo-data">
                 <li class="data-list" type="none">
-
+                    <form action="/delete-task" method="POST">
                     <div class="final-data">
 
                         <div class="taskdata">
@@ -59,12 +71,11 @@
                                 <input type="checkbox" /><%= i.Description %>
                             </label>
                             <h4> <i class="far fa-calendar-alt"></i> <%= i.DueDate %> </h4>
-                            <div class="task-category"><%= i.Category %></div>
                         </div>
-                        
+                        <div class="task-category"><h4><%= i.Category %></h4</div>
                     </div>
-
-
+                    </div>
+                </form>
                 </li>
 
             </div>
