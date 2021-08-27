@@ -46,44 +46,38 @@
     </div>
 
 
-    <div class="delete-button">
-        <a href="/delete-task">
-            <div class="buttons">
-                <button type="submit" id="dlt-btn">
-                    <i class="fas fa-plus"></i>
-                    Delete Tasks
-                </button>
-            </div>
-        </a>
-    </div>
+
 
     <div class="show-task">
-
+        <form action="/delete-task" method="POST">
+            <div class="delete-button">
+                    <div class="buttons">
+                        <button type="submit" id="dlt-btn">
+                            <i class="fas fa-plus"></i>
+                            Delete Tasks
+                        </button>
+                    </div>
+            </div>
         <% for (let i of todo_data) { %>
 
             <div class="todo-data">
                 <li class="data-list" type="none">
-                    <form action="/delete-task" method="POST">
                     <div class="final-data">
 
                         <div class="taskdata">
                             <label class="checkbox">
-                                <input type="checkbox" /><%= i.Description %>
+                                <input type="checkbox" value="<%= i._id %>"  name="delete_checks" /><%= i.Description %>
                             </label>
                             <h4> <i class="far fa-calendar-alt"></i> <%= i.DueDate %> </h4>
                         </div>
                         <div class="task-category"><h4><%= i.Category %></h4</div>
                     </div>
-                    </div>
-                </form>
                 </li>
 
-            </div>
-
-
-
+                    </div>
         <%} %>
-
+        </form>
+    </div>
         
     </div>
 

@@ -16,6 +16,7 @@ router.use(bodyParser.urlencoded({ extended: true }));
 
 
 const homecontroller = require('../controllers/home_controllers'); 
+const { Mongoose } = require('mongoose');
 
 console.log("router loaded");
 
@@ -39,7 +40,17 @@ router.post('/create-task', function(req, res){
 
 })
 
+router.post('/delete-task', function(req, res){
 
+    const id = req.body.delete_checks;
+    todoApp.deleteMany({_id : id}, function(err){
+        if (err){
+            console.log("error in deleting the database",err);
+        }
+        return res.redirect('back');
+    });
+
+});
 
 
 
